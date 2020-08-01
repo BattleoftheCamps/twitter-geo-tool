@@ -1,8 +1,5 @@
 #Import Packages
 import tweepy
-import os
-import tweepy as tw
-import pandas as pd
 
 #Create Crediential Keys
 consumer_key = 'V6XKhulVp7YYY3jVJAE5yZHcR'
@@ -15,20 +12,21 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
-# Define the search term and the date_since date as variables
-new_search = "presidential+election -filter:retweets" #-filter removes retweets
-date_since = "2020-01-01"
-
-# Collect tweets
-tweets = tw.Cursor(api.search,
-              q=new_search,
-              lang="en",
-              since=date_since).items(5)
-
-users_locs = [[tweet.user.screen_name, tweet.user.location, tweet.text] for tweet in tweets]
-
-#Print tweets and attached attributes
-for tweet in tweets:
-    print(users_locs)
 
 
+def get_politics():
+    # Define the search term and the date_since date as variables
+    query = "democrat+republicans -filter:retweets" #removes retweets
+    location_selected = '37.781157,-122.398720,45mi'
+
+    # Collect tweets
+    tweets = tweepy.Cursor(api.search,
+        q=query,
+        geocode=location_selected,
+        lang="en",
+    ).items(5)
+
+    #Print tweets and attached attributes
+    for tweet in tweets:
+        users_attributes = [tweet.user.screen_name, tweet.user.location, tweet.text]
+        print(users_attributes)
