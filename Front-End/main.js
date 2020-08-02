@@ -20,28 +20,31 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 function readytosend() {
-  resultsArray.forEach(function(result){
+  var tweetList = document.querySelector('#list')
+  var result = ['Apple', 'Orange', 'Banana', 'Melon']
+
+  resultsArray.forEach(function(result) { 
+    let tweetInfo = document.createElement('div');
+    tweetInfo.className = "searchResult";
+    tweetInfo.id = result["1. tweet"];
+
+    tweetInfo.onclick = function(){
+      viewDetails(this);
+    };
+
+    let tweetUsername = document.createElement('span');
+	  tweetUsername.className = "tweetUsername";
+	  tweetUsername.innerHTML = result["1. username"];
 	    			
-  let resultDiv = document.createElement('div');
-  resultDiv.className = "searchResult";
-  
-/* set div id to stock ticker symbol for use later in api call in viewDetails() */    			
-resultDiv.id = result["1. symbol"];
-/* set onclick function to fetch stock details and redirect to details page */
-  resultDiv.onclick = function(){
-    viewDetails(this);
-  };
+	  let tweetLocation = document.createElement('span');
+	  tweetLocation.className = "tweetLocation";
+    tweetLocation.innerHTML = result["2. location"];
     
-    let tickerSymbol = document.createElement('span');
-    tickerSymbol.className = "tickerSymbol";
-    tickerSymbol.innerHTML = result["1. symbol"];
-    
-    let stockName = document.createElement('span');
-    stockName.className = "stockName";
-    stockName.innerHTML = result["2. name"];
-    
-    resultDiv.append(tickerSymbol, stockName);
-    
-    $("#searchResults").append(resultDiv);
+    let tweetContent = document.createElement('span');
+	  tweetContent.className = "tweetContent";
+	  tweetContent.innerHTML = result["3. tweet-content"];
+
+    tweetInfo.append(tweetUsername, tweetLocation, tweetContent);
+    $("#searchResults").append(tweetInfo);
   });
 }
