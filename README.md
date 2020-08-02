@@ -1,5 +1,13 @@
 # twitter-geo-tool
-A tool to help you understand the trending topics in a specific geographic location. 
+Understand trending topics in a specific geographic location. 
+
+## Demo Video
+https://youtu.be/9fJlmTzbv7A
+
+## Backend
+https://github.com/BattleoftheCamps/twitter-geo-tool-backend
+
+## Resources Used
 https://www.earthdatascience.org/courses/use-data-open-source-python/intro-to-apis/twitter-data-in-python/
 https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets
 http://docs.tweepy.org/en/latest/index.html
