@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  height: 700%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #1DA1F2;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #093BF5;
+  background: #1DA1F2;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* Title Animation*/
+.container {
+    width: 100%;
+    height: 80%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    overflow: hidden;
+  }
+
+  @-webkit-keyframes rise {
+    0% {padding-top: 100%;}
+    60% {padding-top: 7%;}
+    80% {padding-top: 7%; border-bottom: 0px solid 1DA1F2; opacity: 0.5; text-shadow: 2px 2px 5px #1DA1F2;}
+    100% {padding-top: 7%; border-bottom: 0.35em solid 1DA1F2; opacity: 1; text-shadow: 0;}
+  }
+
+  @keyframes rise {
+    0% {padding-top: 100%;}
+    60% {padding-top: 7%;}
+    80% {padding-top: 7%; border-bottom: 0px solid #1DA1F2; opacity: 0.5; text-shadow: 2px 2px 200px rgba(255, 255, 255, 1);}
+    100% {padding-top: 7%; border-bottom: 0.35em solid  #1DA1F2;opacity: 1; text-shadow: 200px 200px 200px #1DA1F2(255, 255, 255, 0);}
+  }
+
+
+  .rise-text {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    opacity: 0;
+    padding-top: 100%;
+    color: 1DA1F2;
+    border-bottom: 0;
+    text-shadow: 2px 2px 5px 1DA1F2;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 6em;
+    font-weight: normal;
+    -webkit-animation-name: rise;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: cubic-bezier(0, 0.25, 0.55, 1);
+    -webkit-animaiton-fill-mode: forwards;
+    animation-name: rise;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0, 0.25, 0.55, 1);
+    animation-fill-mode: forwards;
+  }
+
+
+  /* Button Styling*/
+  button{display: block;}
+
+  .btn{text-decoration: none; text-align: center; display: block; line-height: 3en;}
+
+  .categories-box{width: 100%;}
+      animation-timing-function: cubic-bezier(0, 0.25, 0.55, 1);
+    animation-fill-mode: forwards;
+  }
+
+
+  /* Button Styling*/
+  button{display: block;}
+
+  .btn{text-decoration: none; text-align: center; display: block; line-height: 3en;}
+
+  .categories-box{width: 100%;}
