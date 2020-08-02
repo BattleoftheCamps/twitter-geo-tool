@@ -2,7 +2,7 @@
 
 body{
   background: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: SF Pro Display;
 }
 
 .search {
@@ -26,7 +26,7 @@ body{
 }
 
 .searchTerm:focus{
-  color: #00B4CC;
+  color: grey;
 }
 
 .searchButton {
@@ -59,6 +59,7 @@ body{
   border: 100px solid #1DA1F2;
   text-align: center;
   width: 90%;
+  font-size: 40px;
   
    
   
