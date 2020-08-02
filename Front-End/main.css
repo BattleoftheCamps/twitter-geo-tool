@@ -1,5 +1,4 @@
 /* General */
-
 body {
   background: white;
   font-family: SF Pro Display;
@@ -10,6 +9,7 @@ body {
   text-align: center;
 }
 
+/* Search Bar */
 .search {
   width: 150%;
   height: 850%;
@@ -17,8 +17,12 @@ body {
   right:30%;
   position: relative;
   display: flex;
+  padding-left: 30px;
+  padding-right: 50px;
+  font-family: SF Pro Display;
 }
 
+/* Search Bar Input */
 .searchTerm {
   width: 100%;
   border: 3px solid #1DA1F2;
@@ -27,13 +31,16 @@ body {
   height: 30px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  color: black;
+  color: grey;
+  font-family: SF Pro Display;
 }
 
 .searchTerm:focus{
   color: grey;
+  font-family: SF Pro Display;
 }
 
+/* Magnifying Glass Search Button */
 .searchButton {
   width: 40px;
   height: 46px;
@@ -44,6 +51,7 @@ body {
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 20px;
+  font-family: SF Pro Display;
 }
 
 /* Resize the wrap to see the search bar change! */
@@ -55,7 +63,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* Title Animation*/
+/* Title Text and Animation*/
 .rise-text {
   position: fixed;
   padding: 0px;
@@ -65,6 +73,7 @@ body {
   font-size: 40px;
 }
 
+/* Lower Title Text */
 .simple-text {
   position: fixed;
   padding: 0px;
@@ -73,6 +82,7 @@ body {
   font-size: 20px;
 }
 
+/* h1 Text */
 h1 {
   background-color: #1DA1F2;
   color: white;
@@ -81,37 +91,26 @@ h1 {
   font-size: 60px;
   top: -4%;
   left: -1%;
-  
-  
 }
 
-  /* Button Styling*/
-  button{display: block;}
+/* Button Styling*/
+button{display: block;}  
+button{display: in;}
 
-  .btn{text-decoration: none; text-align: center; display: block; line-height: 3en;}
+/* Categories Box */
+.categories-box{width: 100%; min-height: 50px; padding: 30px 0 0 30px;}
 
-  .categories-box{width: 100%;}
-      animation-timing-function: cubic-bezier(0, 0.25, 0.55, 1);
-      animation-fill-mode: forwards;
-  
-
-
-  /* Button Styling*/
-  
-  button{display: block;}
-  a.btn{text-decoration: none; text-align: center; display: block; line-height: 2.3em;}
-  a.btn-inli,
-  .btn-inli{display: inline-block; }
-  .btn{border:1px solid transparent; box-shadow: none; color: #616366; border-radius: 5px; padding: 0; cursor: pointer;}
-  .btn-medium{width: 85px; height: 30px; font-size: .8em; margin-right:10px;}
-  .btn-blue{background: #1DA1F2; color: #ffffff;}
-  .btn-center{margin:0 auto;}
-
-  
-  .categories-box{width: 100%; min-height: 50px; padding: 30px 0 0 30px;}
-  
-
-  .btn{text-decoration: none; text-align: center; display: block; line-height: 3en;}
-
-  .categories-box{width: 100%;}
-
+/* Categories Buttons */
+.btnCAT {
+  background-color: #1DA1F2; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 9px solid transparent; 
+  border-radius: 4px; 
+  padding: 0; 
+  cursor: pointer;
+}
