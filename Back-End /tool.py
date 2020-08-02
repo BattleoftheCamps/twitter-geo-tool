@@ -1,9 +1,8 @@
 # Import Packages
 import tweepy
-
-# Create Credential Keys for Map API
 from geopy import Nominatim
 
+# Create Credential Keys
 consumer_key = 'V6XKhulVp7YYY3jVJAE5yZHcR'
 consumer_secret = 'k6ydihnwe2Oue1ITswLVTSHrD5YpLQyNIQlWrxlLnvBYwjRFuL'
 access_token = '2620473211-yUybtaw3CDNd9vyHh9qSvgOul1pkiOuB0wpVEts'
@@ -22,14 +21,16 @@ locator = Nominatim(user_agent='myGeocoder')
 location = locator.geocode(addressINPUT)
 longitudeINPUT = location.longitude
 latitudeINPUT = location.latitude
-print('Latitude = {}, Longitude = {}'.format(location.latitude, location.longitude))
+#Test: print('Latitude = {}, Longitude = {}'.format(location.latitude, location.longitude))
+
+stringINPUT = '{},{},100mi'.format(latitudeINPUT, longitudeINPUT)
+location_selected = stringINPUT  # latitude,longitude,radius
 
 
 # Fetching Government & Politics Trends
-def get_politics(latitudeINPUT, longitudeINPUT):
+def get_politics():
     # Define the search term and the date_since date as variables
-    query = "democrat+republicans -filter:retweets"  # removes retweets
-    location_selected = (latitudeINPUT, longitudeINPUT, '45mi')  # latitude,longitude,radius
+    query = "election -filter:retweets"  # removes retweets
     date_since = '2020/01/01'
 
     # Collect tweets
@@ -50,7 +51,6 @@ def get_politics(latitudeINPUT, longitudeINPUT):
 def get_food():
     # Define the search term and the date_since date as variables
     query = "food -filter:retweets"  # removes retweets
-    location_selected = latitudeINPUT, longitudeINPUT, '45mi'
     date_since = '2020/07/01'
 
     # Collect tweets
@@ -71,7 +71,6 @@ def get_food():
 def get_pop_culture():
     # Define the search term and the date_since date as variables
     query = "tiktok+youtube -filter:retweets"  # removes retweets
-    location_selected = latitudeINPUT, longitudeINPUT, '45mi'
     date_since = '2020/07/01'
 
     # Collect tweets
@@ -87,7 +86,21 @@ def get_pop_culture():
         users_attributes = [tweet.user.screen_name, tweet.user.location, tweet.text]
         print(users_attributes)
 
+# Fetching Technology Trends
+def get_technology():
+    # Define the search term and the date_since date as variables
+    query = "tech -filter:retweets"  # removes retweets
+    date_since = '2020/07/01'
 
-get_politics(37.7790262, -122.4199061)
-get_food()
-get_pop_culture()
+    # Collect tweets
+    tweets = tweepy.Cursor(api.search,
+                           q=query,
+                           date_since=date_since,
+                           geocode=location_selected,
+                           lang="en",
+                           ).items(5)
+
+    # Print tweets and attached attributes
+    for tweet in tweets:
+        users_attributes = [tweet.user.screen_name, tweet.user.location, tweet.text]
+        print(users_attributes)
