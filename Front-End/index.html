@@ -27,19 +27,19 @@
                 <input type="text" class="searchTerm" placeholder="Please enter a location." id="searchbar">
                 <button type="submit" class="searchButton">
                     <i class="fa fa-search"></i>
-                </button>        
+                </button>
             </div>
-    
+
             <div class="categories-box">
-                <a href="#" class="btnCAT">Politics</a>
-                <a href="#" class="btnCAT" >Pop Culture</a>
-                <a href="#" class="btnCAT">Food</a>
-                <a href="#" class="btnCAT">Tech</a>
-                <a href="#" class="btnCAT">Latest</a>
+                <a href="#" class="btnCAT" onclick="getTweets('latest')">Latest</a>
+                <a href="#" class="btnCAT" onclick="getTweets('politics')">Politics</a>
+                <a href="#" class="btnCAT" onclick="getTweets('pop culture')">Pop Culture</a>
+                <a href="#" class="btnCAT" onclick="getTweets('food')">Food</a>
+                <a href="#" class="btnCAT" onclick="getTweets('tech')">Tech</a>
             </div>
         </div>
-    
-       
+
+
         <div id="allTweets"> </div>
         <ul id="allTweets"></ul>
 

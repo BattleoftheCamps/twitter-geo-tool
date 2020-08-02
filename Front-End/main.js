@@ -27,6 +27,13 @@ function initialize() {
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
+async function getTweets(topic) {
+  console.log(topic);
+  const response = await fetch("https://twitter-hackathon.herokuapp.com/topic?topic=" + topic);
+  // go to console to see response contents, just need to display these and we're done!!
+  console.log(await response.json());
+}
+
 function readytosend() {
   var tweetList = document.querySelector('#list')
   var result = ['Apple', 'Orange', 'Banana', 'Melon']
