@@ -90,7 +90,7 @@ h1 {
 
   .btn{text-decoration: none; text-align: center; display: block; line-height: 3en;}
 
-  .categories-box{width: 100%;}
+  .categories-box{width: 100%; }
       animation-timing-function: cubic-bezier(0, 0.25, 0.55, 1);
       animation-fill-mode: forwards;
   
@@ -98,7 +98,8 @@ h1 {
 
   /* Button Styling*/
   
-  button{display: block;}
+  button{display: block; }
+  
   a.btn{text-decoration: none; text-align: center; display: block; line-height: 2.3em;}
   a.btn-inli,
   .btn-inli{display: inline-block; }
@@ -114,4 +115,16 @@ h1 {
   .btn{text-decoration: none; text-align: center; display: block; line-height: 3en;}
 
   .categories-box{width: 100%;}
+
+ /* Search Bar */
+.search {
+  width: 150%;
+  height: 850%;
+  left:-30%;
+  right:30%;
+  position: relative;
+  display: flex;
+  padding-left: 50px;
+  padding-right: 50px;
+}
 
