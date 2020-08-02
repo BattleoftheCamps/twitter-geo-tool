@@ -16,14 +16,15 @@ https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-twe
 http://docs.tweepy.org/en/latest/index.html
 https://towardsdatascience.com/geocode-with-python-161ec1e62b89
 
-#More Information: 
+# More Information: 
+Or, https://devpost.com/software/asd-3ys54f. 
 
-Inspiration
+# Inspiration
 Our goal was to create a product which is utilizable by Twitter in real life. Recently, one of our team members attended Twitter’s Q2, 2020 earnings call on July 23rd (https://twitter.com/TwitterIR/status/1286258421147160576?s=20) in which Ned Segal (CFO) and Jack Dorsey (CEO) mentioned their interest in looking into alternative streams of revenue for the platform. Jack also mentioned looking into a subscription service model in order to sustain revenue for longer time periods rather than a quick advertising campaign fee. We were inspired by Twitter’s revenue strategy to create a product that would help the company experiment with new paths for creating revenue while keeping the platform completely free-of-cost its users.
 
 Our vision is for Twitter GeoTool to be offered as a new product for advertisers or simply anyone who is looking for rich insights into specific locations regarding specific buckets of topics. The tool will be offered in a subscription-based model to advertisers and others as opinions and #trends are constantly changing which requires longevity in use. We included the incorporation of Jack & Ned’s vision for a subscription-based model in order to create a new, sustainable method of revenue for Twitter which does not compromise Twitter’s Trust & Safety mission, yet still provides powerful information insights into public opinions aggregated on the Twitter platform
 
-What it does
+# What it does (in detail)
 We have created the Twitter GeoTool. This tool cross-references between buckets such as politics, pop culture, technology, etc. with any given location to provide real-time insight into the live stream of opinions of those currently living in that region. For example, you can cross-reference between San Francisco, CA, and technology to hear the latest tech buzz directly from the heart of Silicon Valley. Or, you can do some recon about a smaller town in the countryside to learn more about consumer demand for local restaurants, opinions on politics, etc.
 
 Our goal with Twitter GeoTool is to create a time-sensitive and scalable tool that can provide insight about any given location by utilizing the great number of public opinions aggregated on the Twitter platform. There are a few key use cases we have curated towards.
@@ -34,7 +35,7 @@ Business Looking to Expand. At the moment, if a small, medium or larger-tier bus
 
 We are confident there are multiple more use cases for such a dynamic tool, but these are the two we have focused on at the moment. Further cases may include, Venture Capitalists understanding a geographic demographic before making an investment, etc.
 
-How we built it
+# How we built it
 Twitter GeoTool has a front-end, back-end, and a middle-end.
 
 Front-End: Our front-end consists of HTML, CSS, and JavaScript. We aimed for our tool to be easily accessible and understandable by people of all backgrounds and technical experience. And such, we have created a minimalistic and user-centric design. We utilized HTML to build the foundation of our site, added some CSS to give it a Twitter makeover, and then implemented JavaScript to render the individual tweet components. We also used the Google Maps API in order to create a search bar which gathered an accurate location by autocompleting user input, guaranteeing accuracy when translating to longitude and latitude using the Google Places API. Our JavaScript also makes the AJAX requests to our backend, making a POST request to /location/coordinates, passing the location’s latitude and longitude when the user selects a location and making a GET request to /topic, passing the selected topic, when the user clicks on a topic button.
@@ -49,19 +50,8 @@ Back-End: In our back-end we heavily utilized Python to create functions for eac
 
 We also deployed our site to GitHub pages! https://battleofthecamps.github.io/twitter-geo-tool/
 
-Challenges we ran into
-Initially, we were struggling with passing a location into Standard Search because our front-end search field gathered a location in English rather than longitude and latitude coordinates. However, we were able to translate the location in English to coordinates in the front-end and then send the information as a JSON package to the back-end. Another struggle we ran into was passing a specific string into Standard Search for the geolocation field. In the end, we created a template string in Python to create the exact string requirements with the newly fetched data.
-
-We had some technical issues with a few items of the page, especially with the buttons, because they were really hard to align in the way that we wanted, and also the search bar sometimes was hard to put in the center of the webpage. Another task that we found challenging were the borders of the page because they also affected the alignment.
-
-Accomplishments that we are proud of
-We are proud that we were able to work cross-functionally across five different time-zones to collaborate on this wonderful project. It was also extremely exciting to work with the Twitter Developer API and learn how to skillfully organize such large amounts of data. We were able to learn different CSS tags that helped in the enhancement of the webpage. We also learned to incorporate bootstrap and different styling frameworks to customize search bar components. In the end, we were able to bring to life a simple design that we had prior created on Figma! :)
-
-What we learned
-We truly learned the power of location data and the strategic decisions which can be empowered through the knowledge of this powerful information. We learned new tags and also practiced more about CSS, and I discovered different things that I can build with that. WEI also learned new ways to make a real-time collaboration with our teammates. This was a huge experience for us, we never even imagined all the things that can be possible with the Twitter Developer API!
-
-What's next for Twitter GeoTool
+# What's next for Twitter GeoTool
 Up next for Twitter GeoTool, we would love to increase the number of buckets available and scale beyond our current use cases. One feature we would love to implement going forward is the option for users to specify their own topic of choice, instead of choosing from the existing options. We would also love to integrate the tweet results with their t.co URLs so users can click on a result and be taken directly to that tweet. This would be an awesome feature to directly integrate into the existing twitter.com website so users can search for trending topics in their desired location directly within the official site or app.
 
-Built With
+# Built With
 css flask flask-cors github google-map sgoogle-places heroku html javascript python twitter
