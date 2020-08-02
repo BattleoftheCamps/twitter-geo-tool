@@ -39,7 +39,7 @@ def get_politics():
                            since=date_since,
                            geocode=location_selected,
                            lang="en",
-                           ).items(5)
+                           ).items(10)
 
     # Print tweets and attached attributes
     for tweet in tweets:
@@ -59,7 +59,7 @@ def get_food():
                            date_since=date_since,
                            geocode=location_selected,
                            lang="en",
-                           ).items(5)
+                           ).items(10)
 
     # Print tweets and attached attributes
     for tweet in tweets:
@@ -79,7 +79,7 @@ def get_pop_culture():
                            date_since=date_since,
                            geocode=location_selected,
                            lang="en",
-                           ).items(5)
+                           ).items(10)
 
     # Print tweets and attached attributes
     for tweet in tweets:
@@ -98,9 +98,30 @@ def get_technology():
                            date_since=date_since,
                            geocode=location_selected,
                            lang="en",
-                           ).items(5)
+                           ).items(10)
 
     # Print tweets and attached attributes
     for tweet in tweets:
         users_attributes = [tweet.user.screen_name, tweet.user.location, tweet.text]
         print(users_attributes)
+
+# Fetching Latest Tweets
+def get_latest():
+    # Define the search term and the date_since date as variables
+    query = "-filter:retweets"  # removes retweets
+    date_since = '2020/07/01'
+
+    # Collect tweets
+    tweets = tweepy.Cursor(api.search,
+                           q=query,
+                           date_since=date_since,
+                           geocode=location_selected,
+                           lang="en",
+                           ).items(10)
+
+    # Print tweets and attached attributes
+    for tweet in tweets:
+        users_attributes = [tweet.user.screen_name, tweet.user.location, tweet.text]
+        print(users_attributes)
+
+get_latest()
