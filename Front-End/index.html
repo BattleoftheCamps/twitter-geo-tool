@@ -21,28 +21,28 @@
             <h1 class="rise-text">Twitter GeoTool<p class="simple-text"> <em>A robust tool to understand whats #trending in a specific location.</em></p></h1>
         </div>
 
-        <!-- Creating a Seach Bar -->
-        <div class="wrap">
-            <div class="search">
-                <input type="text" class="searchTerm" placeholder="Please enter a location." id="searchbar">
-                <button type="submit" class="searchButton">
-                    <i class="fa fa-search"></i>
-                </button>
+        <div class="main-content">
+            <!-- Creating a Seach Bar -->
+            <div class="wrap">
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="Please enter a location." id="searchbar">
+                </div>
+
+                <div class="categories-box">
+                    <a href="#" class="btnCAT" onclick="getTweets('latest')">Latest</a>
+                    <a href="#" class="btnCAT" onclick="getTweets('politics')">Politics</a>
+                    <a href="#" class="btnCAT" onclick="getTweets('pop culture')">Pop Culture</a>
+                    <a href="#" class="btnCAT" onclick="getTweets('food')">Food</a>
+                    <a href="#" class="btnCAT" onclick="getTweets('technology')">Technology</a>
+                </div>
+
             </div>
 
-            <div class="categories-box">
-                <a href="#" class="btnCAT" onclick="getTweets('latest')">Latest</a>
-                <a href="#" class="btnCAT" onclick="getTweets('politics')">Politics</a>
-                <a href="#" class="btnCAT" onclick="getTweets('pop culture')">Pop Culture</a>
-                <a href="#" class="btnCAT" onclick="getTweets('food')">Food</a>
-                <a href="#" class="btnCAT" onclick="getTweets('tech')">Tech</a>
-            </div>
+            <div id="error"></div>
+            <div id="topic-title"></div>
+            <div id="all-tweets-div"></div>
+
         </div>
 
-
-        <div id="allTweets"> </div>
-        <ul id="allTweets"></ul>
-
     </body>
-    </head>
 </html>
