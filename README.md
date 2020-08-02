@@ -1,6 +1,9 @@
 # twitter-geo-tool
 Understand trending topics in a specific geographic location. 
 
+## See the site live!
+https://battleofthecamps.github.io/twitter-geo-tool/
+
 ## Demo Video
 https://youtu.be/9fJlmTzbv7A
 
