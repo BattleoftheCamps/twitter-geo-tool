@@ -123,5 +123,3 @@ def get_latest():
     for tweet in tweets:
         users_attributes = [tweet.user.screen_name, tweet.user.location, tweet.text]
         print(users_attributes)
-
-get_latest()
