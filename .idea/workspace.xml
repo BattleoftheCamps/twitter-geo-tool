@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f539519-90bb-4a91-81f5-d7cb1aef3bdc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Front-End/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End /tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End /tool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

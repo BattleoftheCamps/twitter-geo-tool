@@ -18,3 +18,30 @@ function initialize() {
   });
 }
 google.maps.event.addDomListener(window, 'load', initialize);
+
+function readytosend() {
+  resultsArray.forEach(function(result){
+	    			
+  let resultDiv = document.createElement('div');
+  resultDiv.className = "searchResult";
+  
+/* set div id to stock ticker symbol for use later in api call in viewDetails() */    			
+resultDiv.id = result["1. symbol"];
+/* set onclick function to fetch stock details and redirect to details page */
+  resultDiv.onclick = function(){
+    viewDetails(this);
+  };
+    
+    let tickerSymbol = document.createElement('span');
+    tickerSymbol.className = "tickerSymbol";
+    tickerSymbol.innerHTML = result["1. symbol"];
+    
+    let stockName = document.createElement('span');
+    stockName.className = "stockName";
+    stockName.innerHTML = result["2. name"];
+    
+    resultDiv.append(tickerSymbol, stockName);
+    
+    $("#searchResults").append(resultDiv);
+  });
+}
