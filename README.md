@@ -4,7 +4,7 @@ Understand trending topics in a specific geographic location.
 ## Demo Video
 https://youtu.be/9fJlmTzbv7A
 
-## Backend
+## Backend (where the TwitterAPI is used)
 https://github.com/BattleoftheCamps/twitter-geo-tool-backend
 
 ## Resources Used
